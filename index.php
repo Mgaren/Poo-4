@@ -2,8 +2,11 @@
 
 require_once 'cars.php';
 
+
+$renault = new Car('bleu', 5, 'electric');
+
 try{
-    echo $car->start();
+    echo $renault->start();
 } catch(Exception $e){
     $hasParkBrake == false;
 }  finally{
