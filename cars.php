@@ -52,17 +52,17 @@ class Car extends Vehicle
         $this->energyLevel = $energyLevel;
     }
 
+    public function setParkBrake()
+    {
+        $this->hasParkBrake = $hasParkBrake;
+    }
+
     public function start(): string
     {
-        if($hasParkBrake === true){
+        if($hasParkBrake == true){
             throw new Exception("parkbrake activated");
         }
         return "Let's go!";
         
-    }
-
-    public function setParkBrake()
-    {
-        $this->hasParkBrake = $hasParkBrake;
     }
 }
