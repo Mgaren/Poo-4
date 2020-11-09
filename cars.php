@@ -1,8 +1,10 @@
 <?php
 
 require_once 'vehicule.php';
+require_once 'interface.php';
 
-class Car extends Vehicle
+
+class Car extends Vehicle implements LightableInterface
 {
     /*
     const ENERGIES = [
@@ -63,6 +65,15 @@ class Car extends Vehicle
             throw new Exception("parkbrake activated");
         }
         return "Let's go!";
-        
+    }
+
+    public function switchOn(): bool
+    {
+        return true;
+    }
+
+    public function switchOff(): bool
+    {
+        return false;
     }
 }
